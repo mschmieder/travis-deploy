@@ -1,0 +1,14 @@
+os:
+- linux
+dist: trusty
+language: cpp
+script:
+- echo "Hello World" >> linux.txt
+deploy:
+  provider: releases
+  api_key:
+    secure: LgChUeU+HtChFCD09Ol+qul7tE/UkRUUNObi83sMWMoYLh/b+r+wk+RCg5F0cOVRkoralsYbvqhLDCF6K0qVDQf+c958CWBn/sNNBcmuQzy3BvIVVnfOjICQYhSJNFu+K7VrWVIit3CUqrlqGNW39sGuK1v/bGu8OybBvpf4TeQOI9otKdDi/8tAqkd3fl7PYYPH/B6ER+wT56deXX4AwXubpUrSYDcZNiaTNGY13DpNJwtRuY9HL9qAjNpOo3C0Dt0Oz3hfeY1F4ojEYU8IhKZZIRLf84ik/7xxc9NpWB+sn6UvEsnCelAKqXzNg2aiTSwO69ENMy4zFvWXnXe94mi3AyR54CAOsA6kRstG+8J6w4pl1HoCG0Rijo3v5qnAl44Av4B7NfoXejLQNMJHXPLRQTBWBwLqeRz+DzKMtkLgpVhid5SSFNSMkc4afq6GwZ930/cyFPsfYnDdpP4Bd/cK5IVC4aFPqdAg9GqGpBnJjeu5dpCtT0s1rS7/UrymmQy/P7gLAeyn/FCOcbPurgsF0nATem97BsArAbeLSs2gTcLZKULDPm0MGYPVR+7EsATQqa/W3HW9wartW+XAvAh+jZRZg9pbO6jNcow8NLi8BhvPbnmP5JZjz5gHde6zVSAaRdRdBAYBXUAHJvf8j3TC6rfuGt2gZAe1AyPZbOU=
+  file: linux.txt
+  skip_cleanup: true
+  on:
+    repo: mschmieder/travis-deploy
