@@ -11,4 +11,5 @@ deploy:
   file: linux.txt
   skip_cleanup: true
   on:
-    repo: mschmieder/travis-deploy
+    tags: false
+    all_branches: true
